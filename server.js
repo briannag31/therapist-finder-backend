@@ -18,19 +18,43 @@ mongoose.connection
 .on("close", () => console.log("You are disconnected from MongoDB"))
 .on("error", (error) => console.log(error))
 
-const TherapistSchema = new mongoose.Schema({
-    therapistName: String,
-    therapistImage: String,
-    therapistDescription: String,
-    therapistType: Array,
-    therapistReview: Array,
-    therapistLocation: {
-        Location: String,
-        lat_lng: Array
+const userSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    password: String,
+    avatarURL: String,
+    googleId: String,
+    reviewedEvents: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Event'
+    }]
+});
+
+const reviewSchema = new mongoose.Schema({
+    review: String,
+    rating: Number,
+    reviewedBy:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
     }
+},{
+    timestamps: true
+})
+
+const TherapistSchema = new mongoose.Schema({
+    Name: {type: String, unique:true, required: true},
+    Description: {type: String, required: true},
+    Portrait: {type: String, required: true},
+    Adress: {type: String, required: true},
+    PhoneNumber: {type: String, required: true},
+    tags:[String],
+    latlng: [],
+    reviews: [reviewSchema]
 })
 
 const Therapist = mongoose.model("Therapist", TherapistSchema)
+const User = mongoose.model("User", userSchema)
+const Reviews = mongoose.model("Reviews", reviewSchema)
 
 app.get("/", (req,res) =>{
     res.send ("you are home")
