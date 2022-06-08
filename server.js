@@ -2,7 +2,7 @@ require("dotenv").config()
 const { PORT = 3001, DATABASE_URL } = process.env
 const express = require("express")
 const app = express()
-
+const therapistSeedData = require("../therapist-finder-backend/models/therapistSeedData")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const morgan = require("morgan")
@@ -59,6 +59,14 @@ const Reviews = mongoose.model("Reviews", reviewSchema)
 app.get("/", (req,res) =>{
     res.send ("you are home")
 })
+
+app.get('/seed', (req, res) => {
+    Therapist.deleteMany({}, (err, deletedItems) => {
+        Therapist.create(therapistSeedData, (err, data) => {
+            res.redirect('/therapists');
+        });
+    });
+});
 
 app.get("/therapists", async (req,res)=>{
     try{
