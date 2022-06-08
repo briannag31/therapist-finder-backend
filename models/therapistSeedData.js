@@ -7,6 +7,10 @@ const therapistSeedData = [
     PhoneNumber: "555-309-5656",
     tags:["Stress", "Anxiety", "Self Esteem", "Coaching"],
     latlng: ["39.7392° N", "104.9903° W"],
+    reviews: [{
+        review: "pretty good",
+        rating: 5
+    }]
 },
 {
     Name: "Jonathan Pierre",
@@ -16,6 +20,10 @@ const therapistSeedData = [
     PhoneNumber: "444-333-4545",
     tags:["Grief", "Familt Conflicts", "PTSD"],
     latlng: ["40.7128° N", "74.0060° W"],
+    reviews: [{
+        review: "great therapist",
+        rating: 5
+    }]
 },
 {
     Name: "Germano Kuerten",
@@ -25,16 +33,24 @@ const therapistSeedData = [
     PhoneNumber: "213-222-1313",
     tags:["Addiction", "Depression", "Relationship Issues"],
     latlng: ["34.0522° N", "118.2437° W"],
+    reviews: [{
+        review: "super helpful",
+        rating: 5
+    }]
 },
 {
     Name: "Alejandro Rojas",
     Description: "Behavioral or mood changes are often the first indications that someone is struggling or hurting. It is not uncommon for people to face challenges as they navigate through life. Although the challenges vary in severity, the effects can seem overwhelming. During these times, people who are struggling are often unable to recognize the tools within them. I work to empower my clients so that they can better adjust and cope. I work to create a supportive and nurturing environment. I help clients to build on existing strengths and find relief.\\n\\I am passionate about my work and enjoy empowering clients to see real changes in their lives. I focus on the presenting concerns and incorporate information regarding client history as it relates to their current level of functioning. I provide support and skills to help clients effectively address personal life challenges. I am an interactive, solution-focused therapist and I integrate a variety of techniques to provide support and practical feedback in order to effectively assist clients with overcoming personal life challenges. I readily utilize cognitive behavioral therapy, narrative therapy and strength-based approaches to treatment.\\n\\ I received my Bachelors Degree from The University of Colorado at Boulder and my Masters Degree in Clinical Counseling Psychology from The Chicago School of Professional Psychology.",
     Portrait: "https://i.imgur.com/TgPUX8u.png",
     Adress: "Houston, TX",
-    PhoneNumber: "213-222-1313",
+    PhoneNumber: "404-444-4404",
     tags:["Career Difficulties", "Anxiety", "Relationship Issues"],
     latlng: ["29.7604° N", "95.3698° W"],
-},
+    reviews: [{
+        review: "would recommend",
+        rating: 5
+    }]
+}
   ]
 
   module.exports = therapistSeedData
