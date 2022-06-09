@@ -14,7 +14,7 @@ module.exports = {
 
 // index
 function index(req, res) {
-  res.json("you are home");
+  res.json({message:"you are home"});
 }
 
 // seed
