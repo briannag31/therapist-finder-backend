@@ -10,10 +10,6 @@ const therapistSeedData = [
     reviews: [{
         review: "pretty good",
         rating: 5
-    },
-    {
-        review: "helpful",
-        rating: 4
     }]
 },
 {
@@ -28,10 +24,7 @@ const therapistSeedData = [
         review: "great therapist",
         rating: 5
     },
-    {
-        review: "pretty good",
-        rating: 4
-    }]
+]
 },
 {
     Name: "Germano Kuerten",
@@ -45,10 +38,7 @@ const therapistSeedData = [
         review: "super helpful",
         rating: 5
     },
-    {
-        review: "pretty good",
-        rating: 4
-    }]
+   ]
 },
 {
     Name: "Alejandro Rojas",
@@ -61,11 +51,8 @@ const therapistSeedData = [
     reviews: [{
         review: "would recommend",
         rating: 5
-    },
-    {
-        review: "pretty good",
-        rating: 4
-    }]
+    }
+   ]
 }
   ]
 
