@@ -6,7 +6,7 @@ const therapistSeedData = [
     address: "Denver, CO",
     phoneNumber: "555-309-5656",
     tags:["Stress", "Anxiety", "Self Esteem", "Coaching"],
-    latlng: ["39.7392° N", "104.9903° W"],
+    latlng: ["39.7392", "104.9903"],
     reviews: [{
         review: "pretty good",
         rating: 5
@@ -19,7 +19,7 @@ const therapistSeedData = [
     address: "New York, New York",
     phoneNumber: "444-333-4545",
     tags:["Grief", "Familt Conflicts", "PTSD"],
-    latlng: ["40.7128° N", "74.0060° W"],
+    latlng: ["40.7128", "74.0060"],
     reviews: [{
         review: "great therapist",
         rating: 5
@@ -32,7 +32,7 @@ const therapistSeedData = [
     address: "Los Angeles, CA",
     phoneNumber: "213-222-1313",
     tags:["Addiction", "Depression", "Relationship Issues"],
-    latlng: ["34.0522° N", "118.2437° W"],
+    latlng: ["34.0522", "118.2437"],
     reviews: [{
         review: "super helpful",
         rating: 5
@@ -45,7 +45,7 @@ const therapistSeedData = [
     address: "Houston, TX",
     phoneNumber: "404-444-4404",
     tags:["Career Difficulties", "Anxiety", "Relationship Issues"],
-    latlng: ["29.7604° N", "95.3698° W"],
+    latlng: ["29.7604", "95.3698"],
     reviews: [{
         review: "would recommend",
         rating: 5

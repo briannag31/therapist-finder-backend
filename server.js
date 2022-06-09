@@ -22,7 +22,6 @@ const Therapist = require('./models/Therapist')
 const User = require('./models/User')
 
 // Routes
-app.use("/api/", therapistRouter)
-
+app.use("/", therapistRouter)
 
 app.listen(PORT, ()=> console.log(`listening on ${PORT}`))
