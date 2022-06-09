@@ -6,17 +6,14 @@ const therapistSeedData = require("./models/therapistSeedData")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const morgan = require("morgan")
+const Therapist = require("./models/Therapist")
 
 app.use(cors())
 app.use(morgan("dev"))
 app.use(express.json())
 
-mongoose.connect(DATABASE_URL)
-
-mongoose.connection
-.on("open", () => console.log("You are connected to MongoDB"))
-.on("close", () => console.log("You are disconnected from MongoDB"))
-.on("error", (error) => console.log(error))
+// database connection 
+require('./config/database')
 
 const userSchema = new mongoose.Schema({
     name: String,
@@ -30,31 +27,10 @@ const userSchema = new mongoose.Schema({
     }]
 });
 
-const reviewSchema = new mongoose.Schema({
-    review: String,
-    rating: Number,
-    reviewedBy:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-    }
-},{
-    timestamps: true
-})
 
-const TherapistSchema = new mongoose.Schema({
-    Name: {type: String, unique:true, required: true},
-    Description: {type: String, required: true},
-    Portrait: {type: String, required: true},
-    Adress: {type: String, required: true},
-    PhoneNumber: {type: String, required: true},
-    tags:[String],
-    latlng: [],
-    reviews: [reviewSchema]
-})
 
-const Therapist = mongoose.model("Therapist", TherapistSchema)
+
 const User = mongoose.model("User", userSchema)
-const Reviews = mongoose.model("Reviews", reviewSchema)
 
 app.get("/", (req,res) =>{
     res.send ("you are home")
