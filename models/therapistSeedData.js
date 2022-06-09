@@ -64,7 +64,7 @@ const therapistSeedData = [
     },
     {
         review: "pretty good",
-        rating: 5
+        rating: 4
     }]
 }
   ]
