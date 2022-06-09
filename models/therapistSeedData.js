@@ -10,6 +10,10 @@ const therapistSeedData = [
     reviews: [{
         review: "pretty good",
         rating: 5
+    },
+    {
+        review: "helpful",
+        rating: 4
     }]
 },
 {
@@ -23,6 +27,10 @@ const therapistSeedData = [
     reviews: [{
         review: "great therapist",
         rating: 5
+    },
+    {
+        review: "pretty good",
+        rating: 4
     }]
 },
 {
@@ -36,6 +44,10 @@ const therapistSeedData = [
     reviews: [{
         review: "super helpful",
         rating: 5
+    },
+    {
+        review: "pretty good",
+        rating: 4
     }]
 },
 {
@@ -48,6 +60,10 @@ const therapistSeedData = [
     latlng: ["29.7604° N", "95.3698° W"],
     reviews: [{
         review: "would recommend",
+        rating: 5
+    },
+    {
+        review: "pretty good",
         rating: 5
     }]
 }
