@@ -15,75 +15,10 @@ app.use(express.json())
 // database connection 
 require('./config/database')
 
-const userSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    password: String,
-    avatarURL: String,
-    googleId: String,
-    reviewedEvents: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Event'
-    }]
-});
+//models
+const Therapist = require('./models/Therapist')
+const User = require('./models/User')
 
-
-
-
-const reviewSchema = new mongoose.Schema({
-    review: {
-        type: String,
-        require: true,
-    },
-    rating: {
-        type: Number,
-        min: 1,
-        max: 5,
-        default: 5,
-        require: true
-    },
-    reviewedBy: { 
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: false
-    }
-    },
-    {timestamps: true}
-)
-
-const therapistSchema = new mongoose.Schema({
-    name:{
-        type: String,
-        unique: true,
-        required: true,
-    },
-    description:{
-        type: String,
-        required: true,
-    },
-    portrait:{
-        type: String,
-        required: true
-    },
-    address:{
-        type: String,
-        required: true
-    },
-    phoneNumber:{
-        type: String,
-        match: /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/,
-        required: true
-    },
-    tags:[String],
-    latlng:[String],
-    reviews: [reviewSchema]
-})
-
-
-const Therapist = mongoose.model("Therapist", therapistSchema)
-
-
-const User = mongoose.model("User", userSchema)
 
 app.get("/", (req,res) =>{
     res.send ("you are home")
