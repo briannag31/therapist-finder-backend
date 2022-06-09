@@ -7,10 +7,16 @@ const therapistSeedData = [
     phoneNumber: "555-309-5656",
     tags:["Stress", "Anxiety", "Self Esteem", "Coaching"],
     latlng: ["39.7392", "104.9903"],
-    reviews: [{
+    reviews: [
+        {
         review: "pretty good",
         rating: 5
-    }]
+        },
+        {
+        review: "very patient and understanding",
+        rating: 5,
+        }
+    ]
 },
 {
     name: "Jonathan Pierre",
@@ -20,10 +26,16 @@ const therapistSeedData = [
     phoneNumber: "444-333-4545",
     tags:["Grief", "Familt Conflicts", "PTSD"],
     latlng: ["40.7128", "74.0060"],
-    reviews: [{
+    reviews: [
+        {
         review: "great therapist",
         rating: 5
-    }]
+        },
+        {
+        review: "amazing, very intuitive",
+        rating: 5,
+        }
+    ]
 },
 {
     name: "Germano Kuerten",
@@ -33,10 +45,16 @@ const therapistSeedData = [
     phoneNumber: "213-222-1313",
     tags:["Addiction", "Depression", "Relationship Issues"],
     latlng: ["34.0522", "118.2437"],
-    reviews: [{
+    reviews: [
+        {
         review: "super helpful",
         rating: 5
-    }]
+        },
+        {
+        review: "great listener, great intuition",
+        rating: 5,
+        }
+    ]
 },
 {
     name: "Alejandro Rojas",
@@ -46,10 +64,16 @@ const therapistSeedData = [
     phoneNumber: "404-444-4404",
     tags:["Career Difficulties", "Anxiety", "Relationship Issues"],
     latlng: ["29.7604", "95.3698"],
-    reviews: [{
+    reviews: [
+        {
         review: "would recommend",
         rating: 5
-    }]
+        },
+        {
+        review: "bad charge me for 10 session and fell asleep during session",
+        rating: 1,
+        }
+    ]
 }
   ]
 
