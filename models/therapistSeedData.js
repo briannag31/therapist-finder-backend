@@ -30,6 +30,7 @@ const therapistSeedData = [
         {
         review: "great therapist",
         rating: 5
+
         },
         {
         review: "amazing, very intuitive",
@@ -48,7 +49,6 @@ const therapistSeedData = [
     reviews: [
         {
         review: "super helpful",
-        rating: 5
         },
         {
         review: "great listener, great intuition",
