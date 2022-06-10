@@ -33,6 +33,7 @@ router.get("/therapists/:id", therapistController.show)
 // add review to therapist 
 router.post("/therapists/review/:id",(req,res)=>{
     Therapist.findById(req.params.id, (err,therapist)=>{
+        
         therapist.reviews.push(req.body)
         // User.findById(req.user, (err,user)=>{
         //     user.reviewedTherapists.push(req.params.id);
