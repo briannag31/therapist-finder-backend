@@ -35,7 +35,7 @@ router.post("/therapists/review/:id",(req,res)=>{
     Therapist.findById(req.params.id, (err,therapist)=>{
         therapist.reviews.push(req.body)
         // User.findById(req.user, (err,user)=>{
-        //     user.reviewedEvents.push(req.params.id);
+        //     user.reviewedTherapists.push(req.params.id);
         //     user.save((err)=>console.log(err))
         // })
         therapist.save((err)=>{
@@ -66,7 +66,7 @@ router.put("/therapists/review/:therapistId/:reviewId/",(req,res)=>{
     Therapist.findById(req.params.therapistId,(err,therapist)=>{
         therapist.reviews.forEach((review,index,array)=>{
             if( review._id.toString() === req.params.reviewId ){
-                const newReviewData = { ...req.body}
+                const newReviewData = { ...req.body }
                 const newReview = Object.assign(review, newReviewData)
                 // res.json(newReview)
             }
