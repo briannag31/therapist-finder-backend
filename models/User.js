@@ -19,7 +19,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         match: /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/,
         required: false
-    }
+    },
+    reviewedTherapists: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Therapist'
+    }]
 })
 
 module.exports = mongoose.model("User", userSchema)
