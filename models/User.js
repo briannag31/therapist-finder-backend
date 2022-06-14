@@ -3,12 +3,11 @@ const mongoose = require("mongoose")
 const userSchema = new mongoose.Schema({
     name:{
         type: String,
-        required: false
+        required: true
     },
     email:{
         type: String,
-        required: false,
-        lowecase: true,
+        required: true,
         unique: true
     },
     password:{
@@ -19,6 +18,14 @@ const userSchema = new mongoose.Schema({
         type: String,
         match: /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/,
         required: false
+    },
+    avatar:{
+        type: String,
+        required: false
+    },
+    googleId:{
+        type: String,
+        required: true 
     },
     reviewedTherapists: [{
         type: mongoose.Schema.Types.ObjectId,

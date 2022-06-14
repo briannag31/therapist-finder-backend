@@ -34,7 +34,7 @@ async function seed(req, res) {
 // all
 async function all(req, res){
     try {
-      res.json(await Therapist.find({}));
+      res.json(await Therapist.find({}).populate("reviews.reviewedBy"));
     } catch (error) {
       res.status(400).json(error);
     }
