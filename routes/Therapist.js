@@ -33,13 +33,16 @@ router.get("/therapists/:id", therapistController.show)
 // routes for reviews
 // add review to therapist 
 router.post("/therapists/review/:therapistId/user/:userId",(req,res)=>{
-    console.log(req.body)
+    console.log(req.body, req.params.userId)
     Therapist.findById(req.params.therapistId, (err,therapist)=>{
         therapist.reviews.push(req.body)
-        User.findById(req.params.userId, (err,user)=>{
-            user.reviewedTherapists.push(req.params.therapistId);
-            user.save((err)=>console.log("this is user err",err))
-        })
+        if(req.params.userId){
+
+            User.findById(req.params.userId, (err,user)=>{
+                user.reviewedTherapists.push(req.params.therapistId);
+                user.save((err)=>console.log("this is user err",err))
+            })
+        }
         therapist.save((err,data)=>{
             res.json({error:data})
         })
