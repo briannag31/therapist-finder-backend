@@ -36,7 +36,7 @@ router.post("/therapists/review/:therapistId/user/:userId",(req,res)=>{
     console.log(req.body, req.params.userId)
     Therapist.findById(req.params.therapistId, (err,therapist)=>{
         therapist.reviews.push(req.body)
-        if(req.params.userId){
+        if(req.params.userId !== "undefined"){
 
             User.findById(req.params.userId, (err,user)=>{
                 user.reviewedTherapists.push(req.params.therapistId);
