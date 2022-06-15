@@ -25,7 +25,7 @@ const reviewSchema = new mongoose.Schema({
 const therapistSchema = new mongoose.Schema({
     name:{
         type: String,
-        unique: true,
+        unique: false,
         required: true,
     },
     description:{
@@ -34,20 +34,20 @@ const therapistSchema = new mongoose.Schema({
     },
     portrait:{
         type: String,
-        required: true
+        required: true,
     },
     address:{
         type: String,
-        required: true
+        required: true,
     },
     phoneNumber:{
         type: String,
         match: /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/,
-        required: true
+        required: true,
     },
     tags:[String],
     latlng:[String],
-    reviews: [reviewSchema]
+    reviews: [reviewSchema],
 })
 
 

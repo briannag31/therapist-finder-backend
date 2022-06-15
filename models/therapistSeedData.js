@@ -406,7 +406,7 @@ const therapistSeedData = [
     description: "Do you feel like you're continually caught in a struggle? Have you spent hours talking about your problems but still feel trapped in the same hole? Maybe you have intrusive thoughts, spiraling worry, or a cycle of repetitive behaviors that only seem to make the problem worse. Or maybe you want to change, but you're not sure how. I know how frustrating, defeating and draining these battles can be. With a warm and collaborative approach, I'm here to help you with research-backed approaches to help you get some traction with the issues plaguing you. I specialize in dealing with OCD, anxiety, and trauma-related issues. Primarily employing Acceptance & Commitment therapy (ACT), ERP, EMDR, and DBT/CBT, I help people find their footing and get moving again. If you've been debating about starting therapy, but now you're ready to take that step, please get in touch today for your free consultation.",
     portrait: "https://i.imgur.com/qMGksBT.jpg",
     address: "San Diego, CA",
-    phoneNumber: "124-4432-4009",
+    phoneNumber: "124-232-4009",
     tags:["Obsessive-Compulsive (OCD)", "Trauma and PTSD", "Anxiety"],
     latlng: ["34.0522", "118.2437"],
     reviews: [
@@ -424,7 +424,7 @@ const therapistSeedData = [
     description: "I practice psychotherapy from an eclectic perspective integrating Humanistic, Spiritual, Depth, and Cognitive Behavioral psychology. Are you ready for positive change in your life? Are you distressed, depressed? Grieving? Anxious? Clients comes to me for several reasons: depression, self-esteem, self empowerment, overcoming habits and addictions, to find freedom from inner struggle, to discover personal purpose , meaning and happiness. I can help you resolve issues, have more satisfying relationships, and grow towards a greater sense of meaning and purpose. I will be your ally in your personal journey. I work with Adults and Children with issues like General Anxiety Disorder, ADHD, depression, divorce and attachment issues. I work with Grief, Depression, Bipolar I and II, as well as Anxiety and Personality Disorders. Call me If your looking for someone to create a warm connection with while you heal. I am available M-Fr 12-8pm in office and via telehealth.",
     portrait: "https://i.imgur.com/bjuvbAs.jpg",
     address: "San Diego, CA",
-    phoneNumber: "124-4432-4009",
+    phoneNumber: "124-442-4009",
     tags:["Obsessive-Compulsive (OCD)", "Trauma and PTSD", "Self Esteem"],
     latlng: ["34.0522", "118.2437"],
     reviews: [
@@ -442,7 +442,7 @@ const therapistSeedData = [
     description: "Psychotherapy helps in managing your feelings, making better choices, and removing the obstacles to your goals. As a licensed psychotherapist and Professor at Pepperdine and Antioch Universities, I work with individuals, couples, and families from diverse cultural backgrounds dealing with emotional difficulties, relationship problems and various psychological conditions. I specialize in treating depression, anxiety, and adjustment disorders. I also specialize in couples counseling and in working with clients from diverse cultural backgrounds. My goal is to help my clients define what they truly want, and then help them manage the obstacles that get in their way. I offer workshops and supervision for therapists and interns. I lecture on various psychological subjects with emphasis on relationships, couples counseling, attachment styles, and overall well-being and happiness.",
     portrait: "https://i.imgur.com/pWo67ko.jpg",
     address: "San Diego, CA",
-    phoneNumber: "124-4432-7777",
+    phoneNumber: "124-443-7777",
     tags:["Obsessive-Compulsive (OCD)", "Trauma and PTSD", "Self Esteem"],
     latlng: ["34.0522", "118.2437"],
     reviews: [
