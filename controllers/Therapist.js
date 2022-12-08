@@ -22,7 +22,7 @@ async function seed(req, res) {
     try {
         Therapist.deleteMany({}, (err, deletedItems) => {
             Therapist.create(therapistSeedData, (err, data) => {
-              // console.log(data)
+              console.log(data)
                 res.json(data);
             });
         });
